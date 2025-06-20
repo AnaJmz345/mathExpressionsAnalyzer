@@ -1,0 +1,156 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: 'Courier New', monospace;
+  background: url('https://previews.123rf.com/images/berezovskyi/berezovskyi1204/berezovskyi120400121/13255165-seamless-background-with-math-formulas.jpg');
+  background-size: 600px;
+  background-repeat: repeat;
+  animation: moveBackground 80s linear infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes moveBackground {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 600px 600px;
+  }
+}
+
+.container {
+  box-sizing: border-box;
+  max-width: 800px;
+  width: 90%;
+  padding: 30px 30px 50px 30px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+  color: white;
+  backdrop-filter: blur(6px);
+  border: 5px solid;
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+  font-family: 'Segoe UI', sans-serif; 
+}
+
+h2 {
+  font-size: 1.3em;
+  margin-bottom: 25px;
+  font-weight: normal;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.inputContainer {
+  position: relative;
+  border: 5px solid;
+  border-radius: 10px;
+  padding: 14px;
+  font-size: 1.8rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.inputContainer:hover {
+  transform: scale(1.02);
+  border-color: #646cff;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.editor {
+  width: 100%;
+  min-height: 50px;
+  outline: none;
+  white-space: pre-wrap;
+  background: transparent;
+  font-size: 1.8rem;
+  font-family: 'Courier New', monospace;
+  text-align: left;
+}
+
+
+.operator {
+  color: #f0c4b1;
+  font-weight: bold;
+}
+
+.parenthesis {
+  color: #b1f0ce;
+  font-weight: bold;
+}
+
+.corchetes {
+  color: #dbdbfc;
+  font-weight: bold;
+}
+
+.numbers {
+  color: #71a4e9;
+  font-weight: bold;
+
+}
+
+.others {
+  color: #CFD8DC;
+  font-weight: bold;
+ 
+}
+
+.valid::before {
+  content: "٩◔‿◔۶ Valid expression";
+  color: #66BB6A;
+  font-weight: bold;
+  display: block;
+  margin-top: 20px;
+}
+
+.invalid::before {
+  content: "o(╥﹏╥)o Invalid expression";
+  color: #EF5350;
+  font-weight: bold;
+  display: block;
+  margin-top: 20px;
+}
+
+.empty::before {
+  content: "(づ｡◕‿‿◕｡)づ   Come on write it";
+  color: #ffcc70;
+  font-weight: bold;
+  display: block;
+  margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 30px 20px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1em;
+  }
+
+  .inputContainer {
+    font-size: 1.4rem;
+    padding: 10px;
+  }
+
+  .colorsPut {
+    top: 10px;
+    left: 10px;
+  }
+
+  input {
+    font-size: 1.4rem;
+  }
+}
