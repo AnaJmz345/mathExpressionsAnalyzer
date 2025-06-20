@@ -1,46 +1,58 @@
-# HOWTO.md – Math Expression Analyzer
+# Math Expression Analyzer
 
-Este proyecto consiste en una aplicación cliente-servidor que analiza expresiones matemáticas en tiempo real usando un autómata de pila (PDA). El frontend fue desarrollado con React + Vite y el backend en Go.
-Este proyecto fue realizado en conjunto por los alumnos:
-- César Morán Macías
-- Ana Paola Jiménez Sedano
-- Ana Elena Velasco García
+This was a school project consisting of a client-server application that analyzes mathematical expressions and validates them in real time using a Pushdown Automaton (PDA). The backend is written in Go, and the frontend is built with React + Vite.
+
+## This project was made by:
+- César Morán Macías (@cesarmrn)
+- Ana Paola Jiménez Sedano (@AnaJmz345)
+- Ana Elena Velasco García (@Anaaveg17)
 
 ---
+## What does it validate?:
+-Support for balanced parenthesis `()` and brackets `[]`
+-You cannot nest `[]` inside `()`, but you can nest `()` inside `[]`
+-Supported operators:
+  - `*` for multiplications
+  - `**` for power (exponentiation) 
+  - `/` for divisions
+  - `+` for additions
+  - `-` for subtractions
+- It accepts real numbers `(0, 0.1, 1.22, -1.23)`
+- Any other symbol outside the supported ones will be rejected
+---
+## Previous requirements
 
-## Requisitos previos
-
-### Software necesario
+### Needed software
 
 #### Backend (Go)
 - Go 1.21 o superior
-- Conexión a internet para descargar dependencias (solo la primera vez)
+- Internet connection (only needed the first time to install dependencies)
 
 #### Frontend (React + Vite)
-- Node.js 18.x o superior
+- Node.js 18.x or superior
 - npm (Node Package Manager)
 
 ---
 
-## Pasos para correr el proyecto
+## Steps to run the project
 
-### 1. Clonar o descargar el proyecto
+### 1. Clone or download the project
 
 ```bash
 git clone https://github.com/CodersSquad-Classes/ct-math-exp-analyzer-ui-cesaryana
 cd ct-math-exp-analyzer-ui-cesaryana
 ```
 
-## Iniciar el backend (Go)
+## Start the server (Go)
 
-Abrir una terminal en la carpeta `backend`.
+In a terminal open the folder `backend`.
 
-Ejecutar:
+Execute:
 
 ```bash
 go run math-exp-analyzer.go
 ```
-Si da problemas el comando anterior, instalar las siguientes librerías:
+If you encounter issues, try installing the required libraries:
 
 ```bash
 go mod init
@@ -48,21 +60,21 @@ go get github.com/gin-gonic/gin
 go get github.com/gin-contrib/cors
 ```
 
-## Iniciar el frontend 
+## Start the backend
 
-Abrir otra terminal en la carpeta `frontend` y posteriormente hacer otro cd a la carpeta dentro de la misma llamada `ui`  .
+In another terminal open the folder `frontend` and go to the folder `ui` with cd .
 
-Ejecutar:
+Execute:
 
 ```bash
 npm install
 npm run dev
 ```
-Abrir en el navegador la siguiente ruta:
+Open the browser in the next link
 ```bash
 http://localhost:5173
 ```
 
-*La interfaz permitirá escribir expresiones que serán validadas en tiempo real.*
+*The interface allows you to write math expressions and see their validation results in real time.*
 
 
