@@ -8,16 +8,16 @@ This was a school project consisting of a client-server application that analyze
 - Ana Elena Velasco García (@Anaaveg17)
 
 ---
-## What does it validate?:
--Support for balanced parenthesis `()` and brackets `[]`
--You cannot nest `[]` inside `()`, but you can nest `()` inside `[]`
+## What does it validate?
+- Balanced parenthesis `()` and brackets `[]`
+- You cannot nest `[]` inside `()`, but you can nest `()` inside `[]`
 -Supported operators:
   - `*` for multiplications
   - `**` for power (exponentiation) 
   - `/` for divisions
   - `+` for additions
   - `-` for subtractions
-- It accepts real numbers `(0, 0.1, 1.22, -1.23)`
+- Accepts real numbers `(0, 0.1, 1.22, -1.23)`
 - Any other symbol outside the supported ones will be rejected
 ---
 ## Previous requirements
